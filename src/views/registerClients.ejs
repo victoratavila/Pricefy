@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs'); %>
+<%- include('../partials/navbar.ejs'); %>
+
+<body>
+<div class = "container">
+
+    
+
+    <form action="/client/save" method="POST" class = "form-group" id="clientForm">
+        <h2 id = "description">Cadastrar cliente</h2><hr>
+        <label for="firstName">Nome</label>
+        <input type="text" id = "firstName" name = "firstName" class = "form-control" required>
+            <br>
+        <label for="lastName">Sobrenome</label>
+        <input type="text" id = "lastName" name = "lastName" class = "form-control" required>
+            <br>
+        <label for="cpf">CPF</label>
+        <input type="text" id = "cpf" name = "cpf" class = "form-control" required maxlength="11">
+            <br>
+        <label for="income">Renda mensal</label>
+        <input type="text" id = "income" name = "income" class = "form-control" required>
+            <br>
+        <button type="submit" class="btn btn-primary" id = "btnCadastrar">Cadastrar</button>
+    </form>
+
+</div>
+</body>
+
+<%- include('../partials/footer.ejs'); %>

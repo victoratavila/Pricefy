@@ -1,0 +1,66 @@
+<%- include('../partials/header.ejs'); %>
+<%- include('../partials/navbar.ejs'); %>
+
+<body>
+<div class = "container">
+
+    
+
+    <form action="/product/save" method="POST" class = "form-group" id="clientForm">
+        <h2 id = "description">Cadastrar produto</h2><hr><br>
+
+        <label for="productName">Nome do produto</label>
+        <input type="text" id = "productName" name = "productName" class = "form-control" required>
+        <br>
+            
+        <label for="priceToBuy">Preço de custo (unidade)</label>
+        <input type="text" id = "priceToBuy" name = "priceToBuy" class = "form-control" required>
+        <br>
+
+        <label for="profitPercent">Porcentagem de lucro (%)</label>
+        <input type="text" id = "profitPercent" name = "profitPercent" class = "form-control" required>
+        <br>
+
+        <label for="priceToSell">Preço de venda (R$)</label>
+       <input type="text"  id = "priceToSell" name = "priceToSell" class = "form-control" >
+        <br>
+
+        <label for="provider">Fornecedor</label>
+        <input type="text" id = "provider" name = "provider" class = "form-control" required maxlength="11">
+        <br>
+
+        <label for="amount">Quantidade</label>
+        <input type="text" id = "amount" name = "amount" class = "form-control" required>
+        <br>
+
+        <button type="submit" class="btn btn-primary" id = "btnCadastrar">Cadastrar</button>
+    </form>
+
+</div>
+</body>
+
+<%- include('../partials/footer.ejs'); %>
+
+<script>
+
+
+$('#profitPercent').focusout(function(){
+
+priceToBuy = parseInt($('#priceToBuy').val());
+var priceToSell = $('#priceToSell').val();
+var profit = $('#profitPercent').val();
+
+
+var thirtyPercent = ((priceToBuy*profit)/100);
+
+console.log(thirtyPercent)
+console.log(priceToBuy)
+var price = thirtyPercent+priceToBuy;
+
+$('#priceToSell').val(price);
+
+})
+
+
+
+</script>

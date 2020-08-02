@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs'); %>
+<%- include('../partials/navbar.ejs'); %>
+
+<body>
+
+<div class = "container">
+    <br><br><h1>Produtos cadastrados</h1>
+    <a href="/create/product" class = "btn btn-primary" id = "newClientButton"> + Add produto</a>
+    <a href="/create/client" class = "btn btn-dark" id = "refreshButton"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2.854 7.146a.5.5 0 0 0-.708 0l-2 2a.5.5 0 1 0 .708.708L2.5 8.207l1.646 1.647a.5.5 0 0 0 .708-.708l-2-2zm13-1a.5.5 0 0 0-.708 0L13.5 7.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0 0-.708z"/>
+  <path fill-rule="evenodd" d="M8 3a4.995 4.995 0 0 0-4.192 2.273.5.5 0 0 1-.837-.546A6 6 0 0 1 14 8a.5.5 0 0 1-1.001 0 5 5 0 0 0-5-5zM2.5 7.5A.5.5 0 0 1 3 8a5 5 0 0 0 9.192 2.727.5.5 0 1 1 .837.546A6 6 0 0 1 2 8a.5.5 0 0 1 .501-.5z"/>
+</svg> Atualizar</a>
+    <br>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+           
+            <th scope="col">Nome</th>
+            <th scope="col">Preço de custo</th>
+            <th scope="col">Lucro</th>
+            <th scope="col">Preço de venda</th>
+            <th scope="col">Fornecedor</th>
+            <th scope="col">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% Product.forEach( (Product) => { %>
+
+            <tr>
+              <td> <%= Product.productName %> </td>
+              <td> R$ <%= Product.priceToBuy %> </td>
+              <td> <%= Product.profitPercent %>%</td>
+              <td> R$ <%= Product.priceToSell %> </td>
+              <td>  <%= Product.provider %> </td>
+              <td> R$ <%= Product.amount %> </td>
+            </tr>
+  
+          <% }) %>
+
+        </tbody>
+      </table>
+
+</div>
+
+</body>
+
+<%- include('../partials/footer.ejs'); %>

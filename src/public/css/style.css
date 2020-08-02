@@ -1,0 +1,75 @@
+body {
+    background-color: #eef1f5;
+    font-family: Gotham light;
+}
+
+
+#clientForm {
+width: 500px;
+margin-left: 25%;
+margin-top: 30px;
+}
+
+label {
+font-size: 22px;
+}
+
+#description {
+font-size: 40px;
+font-family: Gotham;
+font-weight: 300;
+}
+
+#btnCadastrar {
+width: 500px;
+height: 55px;
+font-size: 20px;
+font-family: Gotham;
+}
+
+table {
+text-align: center;
+}
+
+a {
+color: rgb(163, 162, 162);
+}
+
+#newClientButton {
+margin-left: 65%;
+margin-top: -80px;
+font-size: 18px;
+}
+
+
+#refreshButton {
+margin-left: 80%;
+margin-top: -130px;
+font-size: 18px;
+}
+
+#formVenda {
+width: 400px;
+font-weight: 500px;
+font-size: 20px;
+}
+
+#productName{
+width: 400px;
+}
+
+#btnCalcular {
+width: 400px;
+height: 50px;
+font-size: 20px;
+}
+
+#productName {
+width: 500px;
+}
+
+#brand {
+float: left;
+width: 500px;
+}
+
